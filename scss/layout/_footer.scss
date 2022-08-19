@@ -1,0 +1,91 @@
+/* footer */
+.footer {
+    
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--bcg-dark);
+    color: var(--bcg);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+        display: block;
+        }
+
+    &__connect {
+        position: relative;
+        @media screen and (min-width: 768px) and(max-width: 1199px){
+            padding: 0 76px;
+        }
+        
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }}
+    
+    &__adress {
+        @media screen and (max-width: 1199px){
+        margin-bottom: 60px;}
+        @media screen and (min-width: 768px){
+        margin-right: auto; width: 231px;}
+    }
+    
+
+    &__contact {
+        margin-top: 8px;
+        @media screen and (min-width: 1200px) {
+        margin-top: 9px;}
+        
+        display: block;
+
+        color: var(--contact-footer);
+
+        transition-property: color;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+
+        &:hover,
+        &:focus {
+            color: var(--acc);
+        }
+    }
+
+    &__social{
+        margin-bottom: 60px;
+    @media screen and (min-width: 768px) and(max-width: 1199px) {
+        position: absolute;
+        top: 0;
+        right: 89px;
+    
+    }
+    }
+    &__social--left {
+        @media screen and (min-width: 1200px){
+        margin-left: 70px;}
+
+    }
+
+    &__item {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+        background-color: var(--bcg-footer-logo);
+        color: var(--bcg);
+
+        transition-property: background-color;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+
+        &:hover,
+        &:focus {
+            background-color: var(--acc);
+
+        }
+    }
+}

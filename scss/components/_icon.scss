@@ -1,0 +1,18 @@
+// .icon {
+//     fill: currentColor;
+// }
+.icon {
+    fill: currentColor;
+    // display: flex;
+    // justify-content: center;
+    // align-self: center;
+}
+.icon-check {
+    background-color: transparent;
+    border-radius: 2px;
+
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+
+}

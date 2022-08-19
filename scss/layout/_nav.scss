@@ -1,0 +1,45 @@
+.nav {
+    color: var(--scnd-text-color);
+    gap: 50px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    @media screen and (max-width:767px) {
+            display: none;
+    
+        }
+
+    
+}
+
+
+.nav__item {
+
+
+    padding-bottom: 32px;
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+
+    &--current {
+        color: var(--acc);
+        position: relative;
+
+        &::after {
+            width: 100%;
+            position: absolute;
+            display: block;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--acc);
+            content: "";
+            left: 0;
+            bottom: 0;
+
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--acc);
+    }
+}

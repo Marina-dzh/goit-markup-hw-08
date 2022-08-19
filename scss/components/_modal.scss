@@ -1,0 +1,201 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+
+    
+
+    transition-property: opacity, visability;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+
+
+    &--is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        & .modal {
+            transform: translate(-50%, -50%) scale(0.2) rotate(0.5turn);
+
+        }
+    }
+}
+
+
+.form {
+
+    &__group {
+        margin-bottom: 20px;
+
+    }
+
+    &__wrap {
+        display: block;
+        position: relative;
+        margin-bottom: 10px;
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+.modal {
+    @media screen and (max-height: 609px) {
+            position: absolute;
+            top: 310px;
+            left: 50%;
+        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    padding: 40px;
+    width: 100%;
+
+    @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+    @media screen and (min-width: 1200px){width: 528px;}
+
+    background-color: var(--bcg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition-property: transform, visibility, opacity;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+    /* background-color: tomato; */
+
+    &__form {
+        text-align: center;
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        transform: translateX(100%);
+
+        transition-property: fill;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+
+    }
+
+    &__label {
+        display: block;
+        text-align: left;
+        margin-bottom: 4px;
+    }
+
+
+    &__input,
+    &__input-comment {
+        padding: 12px;
+        
+        padding-left: 42px;
+        width: 100%;
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: transparent;
+
+        transition-property: border;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+    }
+
+    &__input-comment {
+        padding: 12px 16px;
+        resize: none;
+        height: 120px;
+
+        transition-property: border;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+    }
+}
+
+
+
+.form__wrap:focus-within .modal__input,
+.form__wrap:hover .modal__input-comment,
+.form__wrap:hover .modal__input,
+.form__wrap:focus-within .modal__input-comment {
+    border: 1px solid var(--acc);
+}
+
+.form__wrap:hover .modal__icon,
+.form__wrap:focus-within .modal__icon {
+    fill: var(--acc);
+}
+
+
+
+
+
+.policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 7px;
+    margin-bottom: 30px;
+
+    &__agreement {
+        font-size: 12px;
+        @media screen and (min-width: 1200px) {
+                font-size: 14px;
+            }
+
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    }
+
+    &__link {
+        color: var(--acc);
+    }
+}
+
+
+
+.policy-checkbox:checked+.icon-check {
+    background-color: var(--acc);
+
+}
+
+.register-icon-check {
+    opacity: 0;
+    fill: var(--bcg);
+
+    transition-property: opacity;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+
+}
+
+.policy-checkbox:checked+.icon-check .register-icon-uncheck {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+}
+
+
+.policy-checkbox:checked+.icon-check .register-icon-check {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--func);
+}

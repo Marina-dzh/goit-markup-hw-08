@@ -1,0 +1,11 @@
+.product {
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
+    @extend %sect-padd;
+    &__item {
+        position: relative;
+        @include flex-basis (var(--indent), var(--item));
+
+    }
+}

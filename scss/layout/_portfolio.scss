@@ -1,0 +1,39 @@
+.portfolio {
+    @extend %sect-padd;
+    &__filter--flex {
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: 768px){justify-content: center};
+        @media screen and (max-width: 767px) {max-width: 400px;
+        }
+        gap: 8px;
+        row-gap: 15px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 1200px){
+            margin-bottom: 50px;
+        }
+
+    }
+}
+.work__item {
+    @media screen and (max-width: 767px){
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }}
+        @media screen and (min-width: 768px)and (max-width: 1199px){
+            width: calc(50% - 15px);
+            
+
+        }
+        @media screen and (min-width: 1200px) {
+        @include flex-basis (var(--indent), var(--work));}
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+.work__item:hover .card__overlay,
+.work__item:focus .card__overlay {
+    transform: translate(0);
+}

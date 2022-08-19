@@ -1,0 +1,58 @@
+
+
+.subscribe {
+    display: block;
+    @media screen and (min-width: 1200px){
+    margin-left: 93px;}
+    
+
+    &__email {
+        
+        @media screen and (min-width: 1200px) {display: flex;}
+        
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    &--border {
+        @media screen and (min-width: 768px) {
+                width: 450px;
+                
+            }
+        @media screen and (min-width: 1200px) {
+                width: 358px;
+                margin-bottom: 0;
+            }
+            width: 100%;
+            margin-bottom: 20px;
+        
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        outline: transparent;
+        border-radius: 4px;
+        background-color: transparent;
+        padding: 15px 16px;
+        color: var(--bcg);
+
+        transition-property: border;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+
+        &:hover,
+        &:focus {
+            border: 1px solid var(--acc);
+        }
+    }
+
+    &__btn-submit {
+        @extend %btn;
+        padding: 10px 28px;
+        display: block;
+            margin-left: auto;
+            margin-right: auto;
+        
+        @media screen and (min-width: 1200px){
+display: flex;
+    gap: 10px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.social {
+    @extend %sect-padd;
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &--mrgtop {
+            margin-top: 20px;
+        }
+    }
+
+
+    &__item {
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+
+        color: var(--icon-color);
+        transition-property: color, background-color;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--func);
+
+        &:hover,
+        &:focus {
+            color: var(--bcg);
+            background-color: var(--acc);
+        }
+    }
+
+}
