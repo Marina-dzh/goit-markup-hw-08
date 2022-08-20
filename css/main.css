@@ -1049,6 +1049,7 @@ img {
     --clients:3;
     -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--clients) - 1))/var(--clients));
         flex-basis: calc((100% - var(--indent) * (var(--clients) - 1))/var(--clients));
+    max-width: 226px;
   }
 }
 @media screen and (min-width: 1200px) {

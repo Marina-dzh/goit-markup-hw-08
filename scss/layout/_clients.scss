@@ -13,10 +13,13 @@
         justify-content: center;
         align-items: center;
         height: 92px;
+        
         @include flex-basis (var(--indent), var(--clients));
+        
         @media screen and (min-width: 768px){
             --clients:3;
-        @include flex-basis (var(--indent), var(--clients));}
+        @include flex-basis (var(--indent), var(--clients));
+    max-width: 226px}
         @media screen and (min-width: 1200px){
             --clients:6;
         @include flex-basis (var(--indent), var(--clients));}
